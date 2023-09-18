@@ -8,14 +8,16 @@ jobs:
         run:  echo "Hello World!"
       - name: Multiple commands
         run: |
-            uname -a
+            sysdet=$(uname -a)
+            echo "System details : ${sysdet}"
             echo
-            uptime
+            nodev=$(node -v)
+            echo "Node version : ${node}"
             echo
-            node -v
+            npmv=$(npm -v)
+            echo "npm version : ${npmv}"
+            pyver=$(python --version)
+            echo "Python Version : ${pyvar}"
             echo
-            npm -v
-            echo 
-            python --version
       - name: Print goodbye
         run: echo "Done - Bye!"
