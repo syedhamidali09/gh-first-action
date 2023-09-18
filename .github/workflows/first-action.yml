@@ -6,11 +6,16 @@ jobs:
     steps:
       - name: Print greetings
         run:  echo "Hello World!"
-      - name: Pring sysinfo
+      - name: Multiple commands
         run: |
             uname -a
             echo
             uptime
             echo
+            node -v
+            echo
+            npm -v
+            echo 
+            python --version
       - name: Print goodbye
         run: echo "Done - Bye!"
