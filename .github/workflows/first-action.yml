@@ -12,12 +12,12 @@ jobs:
             echo "System details : ${sysdet}"
             echo
             nodev=$(node -v)
-            echo "Node version : ${node}"
+            echo "Node version : ${nodev}"
             echo
             npmv=$(npm -v)
             echo "npm version : ${npmv}"
             pyver=$(python --version)
-            echo "Python Version : ${pyvar}"
+            echo "Python Version : ${pyver}"
             echo
       - name: Print goodbye
         run: echo "Done - Bye!"
