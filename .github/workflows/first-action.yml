@@ -6,5 +6,9 @@ jobs:
     steps:
       - name: Print greetings
         run:  echo "Hello World!"
+      - name: Pring sysinfo
+        run: |
+            echo -e "$(uname-a)\n"
+            echo -e $(uptime)\n"
       - name: Print goodbye
         run: echo "Done - Bye!"
