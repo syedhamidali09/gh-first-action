@@ -11,3 +11,12 @@ on:
         - 'dev'
         - 'test'
         - 'prod'
+jobs:
+  Test-var:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up environment
+        with:
+            DEPLOYMENT_ENVIORNMENT: ${{ inputs.DEPLOYMENT_ENVIORNMENT }}
+        shell: |
+            echo "${{ inputs.DEPLOYMENT_ENVIORNMENT }}"
