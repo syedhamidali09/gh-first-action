@@ -20,4 +20,8 @@ jobs:
               shell: bash
               run: |
                 date
-                echo ${{ inputs.DEPLOYMENT_ENVIORNMENT }}
+                touch /tmp/${{ inputs.DEPLOYMENT_ENVIORNMENT }}_app.log
+                seq 1024 > /tmp/${{ inputs.DEPLOYMENT_ENVIORNMENT }}_app.log
+                du -sh /tmp/${{ inputs.DEPLOYMENT_ENVIORNMENT }}_app.log
+                echo
+                ls -lhrt /tmp/${{ inputs.DEPLOYMENT_ENVIORNMENT }}_app.log
