@@ -1,0 +1,13 @@
+name: Var test
+run-name: Deploy Splunk
+on: 
+  workflow_dispatch:
+    inputs:
+      DEPLOYMENT_ENVIORNMENT:
+        description: 'Deployment Env of Infra. Expected values are ''dev'', ''test'', ''pro'''
+        default: 'dev'
+        type: choice
+        options:
+        - 'dev'
+        - 'test'
+        - 'prod'
