@@ -1,0 +1,22 @@
+name: Test Var
+run-name: Test Var
+on:
+    workflow_dispatch:
+        DEPLOYMENT_ENVIORNMENT:
+            description: 'Deployment Env of Infra. Expected values are ''dev'', ''test'', ''pro'''
+            default: 'dev'
+            type: choice
+            options:
+            - 'dev'
+            - 'test'
+            - 'prod'
+
+jobs:
+    First:
+        runs-on: ubuntu-latest
+        steps:
+            - name: echo the value
+              shell: bash
+              run: |
+                date
+                echo ${{ inputs.DEPLOYMENT_ENVIORNMENT }}
