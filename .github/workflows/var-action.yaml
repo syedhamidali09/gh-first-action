@@ -1,7 +1,7 @@
 name: Var test
 run-name: Deploy Splunk
-on: 
-  workflow_dispatch:
+on: workflow_dispatch
+  
     inputs:
       DEPLOYMENT_ENVIORNMENT:
         description: 'Deployment Env of Infra. Expected values are ''dev'', ''test'', ''pro'''
